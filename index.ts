@@ -112,6 +112,10 @@ type PersonOmit = Omit<Person, "profissao">;
 
 type CriterioExclude = Exclude<Criterio, "greater">;
 
+//NOTE: Record<K, T> cria um tipo de objeto onde as chaves (K) têm um tipo específico
+// e os valores (T) seguem outro tipo. Aqui, `Pessoas` define chaves string e valores `Person`,
+// e o objeto `pessoas` implementa isso com CPFs como chaves e dados pessoais como valores.
+
 // 6. Record
 
 type Pessoas = Record<string, Person>;
@@ -128,3 +132,4 @@ const pessoas: Pessoas = {
     altura: 1.61,
   },
 };
+console.log(pessoas);
